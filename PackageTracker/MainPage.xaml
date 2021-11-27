@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PackageTracker.MainPage"
+             Background="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Margin="15,22,7,9"
+                        CornerRadius="90"
+                        Grid.Row="0"
+                        Grid.Column="0" 
+                        Text="&lt;"
+                        FontSize="30"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        BackgroundColor="#626263"
+                        Opacity="0.6"
+                        Clicked="Button_Clicked_1"/>
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                        Text="  Your packages"
+                        TextColor="white"
+                        VerticalOptions="Center"
+                        Margin="15,35,15,15"
+                        FontSize="30"
+                        HorizontalOptions="Center"/>
+                <Button Margin="7,22,15,9"
+                        CornerRadius="90"
+                        Grid.Row="0"
+                        Grid.Column="2" 
+                        Grid.ColumnSpan="2"
+                        Text="+"
+                        FontSize="30"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        BackgroundColor="#626263"
+                        Opacity="0.6"
+                        Clicked="Button_Clicked"/>
+            </Grid>
+            <CollectionView ItemsSource="{Binding PData}" Margin="10"
+                      Grid.ColumnSpan="2"
+                      SelectionMode="Single"
+                      SelectionChanged="CollectionView_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#626263"
+                               CornerRadius="15"
+                               Opacity="0.6">
+                            <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Id:"
+                                                       TextColor="White" />
+                                        <Label Text="{Binding Id}"
+                                                    TextColor="White" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Sender:"
+                                                       TextColor="White" />
+                                        <Label Text="{Binding Sender}"
+                                                    TextColor="White" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Destination:"
+                                                       TextColor="White" />
+                                        <Label Text="{Binding Destination}"
+                                                       TextColor="White" />
+                                    </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

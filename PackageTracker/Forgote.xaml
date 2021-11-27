@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PackageTracker.Forgote">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0.2,0"
+                             EndPoint="0.8,1">
+            <GradientStop Color="#59DD4D"
+                          Offset="0.0"/>
+            <GradientStop Color="#1D2AA4"
+                          Offset="0.2"/>
+            <GradientStop Color="#AFACD2"
+                          Offset="0.6"/>
+            <GradientStop Color="#110B38"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Margin="15,22,7,9"
+                            CornerRadius="90"
+                            Grid.Row="0"
+                            Grid.Column="0" 
+                            Grid.ColumnSpan="2"
+                            Text="&lt;"
+                            FontSize="30"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            BackgroundColor="#c4c4c4"
+                            Opacity="0.6"
+                            Clicked="Button_Clicked_1"/>
+                <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="7"
+                            Text="Reset"
+                            TextColor="white"
+                            VerticalOptions="Center"
+                            Margin="15,35,15,15"
+                            FontSize="30"
+                            HorizontalOptions="Center"/>
+            </Grid>
+            <Frame BackgroundColor="#C4C4C4" Opacity="0.6" Margin="15,0,15,5" CornerRadius="15"  OutlineColor="white" >
+                <StackLayout>
+                    <Label Text=" Enter your email address "
+                           TextColor="white"/>
+                    <Frame CornerRadius="10" >
+                        <Entry Text="" />
+                    </Frame>
+                    <Button Text="Confirm"
+                    BackgroundColor="#C4C4C4"
+                    Opacity="0.6" Margin="15,0,15,5"
+                    CornerRadius="15" FontSize="20"
+                    BorderColor="white"
+                    BorderWidth="3"
+                    Clicked="Button_Clicked" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

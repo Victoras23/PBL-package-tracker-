@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PackageTracker.LoginPage">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0.2,0"
+                             EndPoint="0.8,1">
+            <GradientStop Color="#59DD4D"
+                          Offset="0.0"/>
+            <GradientStop Color="#1D2AA4"
+                          Offset="0.2"/>
+            <GradientStop Color="#AFACD2"
+                          Offset="0.6"/>
+            <GradientStop Color="#110B38"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+
+        <StackLayout >
+
+
+            <Label Text="Log in"
+                TextColor="white"
+                VerticalOptions="Center"
+                Margin="15,35,15,15"
+                FontSize="40"
+                HorizontalOptions="Center"/>
+
+            <Frame BackgroundColor="#C4C4C4" Opacity="0.6" Margin="15,0,15,5" CornerRadius="15"  OutlineColor="white" >
+                <StackLayout>
+                    <StackLayout >
+                        <Frame Margin="135.8,0,135.8,0" Padding="0" CornerRadius="90">
+                            <Image Source="logo.jpg"
+                                   HeightRequest="70"/>
+                        </Frame>
+                    </StackLayout>
+                    <Label Text=" Username "
+                           TextColor="white"/>
+                    <Frame CornerRadius="10" >
+                        <Entry Text="" />
+                    </Frame>
+                    <Label Text="Password"
+                           TextColor="white"
+                           />
+                    <Frame CornerRadius="10" Margin="0,0,0,5">
+                        <Entry Text="" IsPassword="True"/>
+                    </Frame>
+                    <Grid ColumnDefinitions="1*, 1*" RowDefinitions="1*, Auto">
+                        <Button Grid.Row="0" Grid.Column="0" Text="Log in" BackgroundColor="#637693" FontSize="16" Clicked="Button_Clicked"/>
+                        <Button Grid.Row="0" Grid.Column="1" Text="Forgote password ?" TextColor="White" BackgroundColor="#c4c4c4" Opacity="1" FontSize="13" Clicked="Button_Clicked_1"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <Button Text="Register"
+                    BackgroundColor="#C4C4C4"
+                    Opacity="0.6" Margin="15,0,15,5"
+                    CornerRadius="15" FontSize="20"
+                    BorderColor="white"
+                    BorderWidth="3"
+                    Clicked="Button_Clicked_r" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

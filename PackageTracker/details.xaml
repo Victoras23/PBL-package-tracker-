@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PackageTracker.details"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Margin="15,22,7,9"
+                            CornerRadius="90"
+                            Grid.Row="0"
+                            Grid.Column="0" 
+                            Grid.ColumnSpan="2"
+                            Text="&lt;"
+                            FontSize="30"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            BackgroundColor="#626263"
+                            Opacity="0.6"
+                            Clicked="Button_Clicked"/>
+                <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="7"
+                            Text="  Details"
+                            TextColor="white"
+                            VerticalOptions="Center"
+                            Margin="15,35,15,15"
+                            FontSize="30"
+                            HorizontalOptions="Center"/>
+            </Grid>
+            <Frame BackgroundColor="#626263" CornerRadius="15" Opacity="0.6">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Id : " TextColor="white"/>
+                        <Label x:Name="Id" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Sender : " TextColor="white"/>
+                        <Label x:Name="Sender" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Destination : " TextColor="white"/>
+                        <Label x:Name="Destination" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Location : " TextColor="white"/>
+                        <Label x:Name="Location" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Currier Id : " TextColor="white"/>
+                        <Label x:Name="CId" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Phone Number: " TextColor="white"/>
+                        <Label x:Name="PN" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="State : " TextColor="white"/>
+                        <Label x:Name="State" TextColor="white"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Time until delivery : " TextColor="white"/>
+                        <Label x:Name="Time" TextColor="white"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

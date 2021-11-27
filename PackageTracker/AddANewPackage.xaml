@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PackageTracker.AddANewPackage"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Margin="15,22,7,9"
+                        CornerRadius="90"
+                        Grid.Row="0"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2"
+                        Text="&lt;"
+                        FontSize="30"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        BackgroundColor="#626263"
+                        Opacity="0.6"
+                        Clicked="Button_Clicked"/>
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="7"
+                        Text="  Add a new package"
+                        TextColor="white"
+                        VerticalOptions="Center"
+                        Margin="15,35,15,15"
+                        FontSize="30"
+                        HorizontalOptions="Center"/>
+            </Grid>
+            <Frame BackgroundColor="#626263" Opacity="0.6" HeightRequest="500">
+                <StackLayout>
+                    <Label Text="Your new package"
+                            TextColor="white"
+                            VerticalOptions="Center"
+                            Margin="15,0,15,15"
+                            FontSize="20"
+                            HorizontalOptions="Center"/>
+                    <Label Text="Enter the Package code" TextColor="white"/>
+                    <Frame CornerRadius="20">
+                        <Entry x:Name="packageCode"  Text=""/>
+                    </Frame>
+                    <ImageButton Grid.Row="0" Grid.Column="0" Source="Capture.PNG" CornerRadius="20" Clicked="ImageButton_Clicked"/>
+
+                    <Button Text="Add" Background="#DAAA2F" CornerRadius="15" VerticalOptions="EndAndExpand" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
